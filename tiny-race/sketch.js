@@ -25,7 +25,8 @@ function draw() {
     if (mouseButton.left && racerXs[i] < finishX && i >= 1 && i <= 2){
       racerXs[i] += 2;
     }
-   if (keyIsDown(LEFT_ARROW) && racerXs[i] < finishX && i >= 3){
+   if (keyIsDown(LEFT_ARROW) && racerXs[i] < finishX && i ===3 ||
+       keyIsDown(LEFT_ARROW) && racerXs[i] < finsishX && i === 0){
       racerXs[i] -=1;
     }
     circle(racerXs[i], y, 24);
