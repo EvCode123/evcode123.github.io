@@ -1,6 +1,8 @@
 let userName = [];
+let userResponse = [];
 let runFor = false;
 let getName = false;
+let endNameDisplay = 0;
 function setup() {
   createCanvas(400, 400);
 }
@@ -23,12 +25,21 @@ function draw() {
       let textStart = 130;
       let x = textStart + textStep * i;
       text(userName[i], x, 200, 200, 200 );
+      if (i === userName.length - 1){
+        text("how are you?", x + 20, 200, 200, 200);
+      }
+      for (let i = 0; i < userResponse.length; i++){
+        let textStep = 10;
+        let textStart = 130;
+        let x = textStart + textStep * i;
+        text(userResponse[i], x, 300, 200, 200);
+      }
     }
     }
 }
 
 function keyPressed(){
-  if (key === "1"){
+  if (key === "1" && getName === false){
     userName.pop();
   }
   if (key === "2"){
@@ -37,6 +48,10 @@ function keyPressed(){
   if (key === "3"){
     location.reload();
   }
+  if (key === "4"){
+    userName.push(" ");
+  }
+  if (getName === false){
   if (key === "e"){
     userName.push("e");
   }
@@ -115,4 +130,85 @@ function keyPressed(){
   if (key === "z"){
     userName.push("z");
   }
+}
+if (getName === true){
+  if (key === "e"){
+    userResponse.push("e");
+  }
+  if (key === "v"){
+    userResponse.push("v");
+  }
+  if (key === "a"){
+    userResponse.push("a");
+  }
+  if (key === "n"){
+    userResponse.push("n");
+  }
+  if (key === "b"){
+    userResponse.push("b");
+  }
+  if (key === "c"){
+    userResponse.push("c");
+  }
+  if (key === "d"){
+    userResponse.push("d");
+  }
+  if (key === "g"){
+    userResponse.push("g");
+  }
+  if (key === "f"){
+    userResponse.push("f");
+  }
+  if (key === "h"){
+    userResponse.push("h");
+  }
+  if (key === "i"){
+    userResponse.push("i");
+  }
+  if (key === "j"){
+    userResponse.push("j");
+  }
+  if (key === "k"){
+    userResponse.push("k");
+  }
+  if (key === "l"){
+    userResponse.push("l");
+  }
+  if (key === "m"){
+    userResponse.push("m");
+  }
+  if (key === "o"){
+    userResponse.push("o");
+  }
+  if (key === "p"){
+    userResponse.push("p");
+  }
+  if (key === "q"){
+    userResponse.push("q");
+  }
+  if (key === "r"){
+    userResponse.push("r");
+  }
+  if (key === "s"){
+    userResponse.push("s");
+  }
+  if (key === "t"){
+    userResponse.push("t");
+  }
+  if (key === "u"){
+    userResponse.push("u");
+  }
+  if (key === "w"){
+    userResponse.push("w");
+  }
+  if (key === "x"){
+    userResponse.push("x");
+  }
+  if (key === "y"){
+    userResponse.push("y");
+  }
+  if (key === "z"){
+    userResponse.push("z");
+  }
+}
 }
