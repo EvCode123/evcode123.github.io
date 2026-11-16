@@ -1,5 +1,5 @@
-let prices = [6, 4, 9];
-let quantities = [2, 3, 1];
+let prices = [5, 2];
+let quantities = [1, 4];
 let total = 0;
 
 for (let i = 0; i < prices.length; i++) {

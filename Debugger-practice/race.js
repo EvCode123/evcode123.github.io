@@ -1,5 +1,5 @@
-let racerXs = [0, 4, 8];
-let moves = [7, 4, 2];
+let racerXs = [10, 0, 0];
+let moves = [3, 2, 1];
 
 for (let round = 1; round <= 3; round++) {
   for (let i = 0; i < racerXs.length; i++) {

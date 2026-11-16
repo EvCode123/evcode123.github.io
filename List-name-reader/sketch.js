@@ -7,19 +7,18 @@ function setup() {
   createCanvas(400, 400);
 }
 
-function draw() {
-  background(220);
-  if (getName === false){
-  text("what is your name?", 100, 200, 200, 200);
+function getUserName(){
+text("what is your name?", 100, 200, 200, 200);
     for (let i = 0; i < userName.length; i++){
       let textStep = 10;
       let textStart = 100;
       let x = textStart + textStep * i;
       text(userName[i], x, 250, 200, 200 );
     }
-  }
-    if (getName === true){
-      text("hello",100, 200, 200, 200);
+}
+
+function sayHello(){
+  text("hello",100, 200, 200, 200);
       for (let i = 0; i < userName.length; i++){
       let textStep = 10;
       let textStart = 130;
@@ -35,6 +34,15 @@ function draw() {
         text(userResponse[i], x, 300, 200, 200);
       }
     }
+}
+
+function draw() {
+  background(220);
+  if (getName === false){
+    getUserName();
+  }
+    if (getName === true){
+      sayHello();
     }
 }
 
